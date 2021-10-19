@@ -53,6 +53,7 @@ namespace Task_3._2
                 x = y - x++ *z;
                 Console.WriteLine(x);
             }
+
             Console.WriteLine();
             Console.ReadKey();
         }

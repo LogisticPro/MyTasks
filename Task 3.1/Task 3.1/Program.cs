@@ -15,7 +15,7 @@ namespace ConsoleApp1
             string radius = Console.ReadLine();
             double r;
 
-            while (Double.TryParse(radius, out r))
+            while (!Double.TryParse(radius, out r))
             {              
                 Console.WriteLine("Вы ввели неверное значение, повторите");
                 radius = Console.ReadLine();
