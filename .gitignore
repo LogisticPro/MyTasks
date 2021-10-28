@@ -24,3 +24,16 @@ Task 4.1/.vs/Task 4/v16/
 Task 4.1/.vs/Task 4.1/DesignTimeBuild/
 Task 3.1/.vs/Task 3.1/v16/
 Task 3.1/.vs/Task 3.1/DesignTimeBuild/.dtbcache
+*.dtbcache
+*.suo
+*.lock
+*.ide
+*.json
+*.dll
+*.pdb
+*.cache
+*.txt
+*.props
+*.targets
+*.exe
+*.CopyComplete
