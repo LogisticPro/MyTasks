@@ -11,7 +11,7 @@ namespace Task13
                 
         }
 
-        public CustomExeption(string message)
+        public CustomExeption(string message) : base(message)
         {
             Console.WriteLine(message);
         }
