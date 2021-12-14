@@ -21,9 +21,12 @@ namespace Task15
                 {                    
                     Console.WriteLine(item.Name);
 
-                    var dest = item.DirectoryName + ".zip";
+                    var dest = $"{item.FullName}.zip";
 
-                    ZipFile.CreateFromDirectory(item.DirectoryName, dest);
+                    using (ZipArchive zip = ZipFile.Open(dest, ZipArchiveMode.Create))
+                    {
+                        zip.CreateEntryFromFile(item.FullName, dest);
+                    }
                 }               
             }
             else if(list.Count == 0)
