@@ -51,3 +51,4 @@ HomeTask_2/HomeTask_2/obj/Debug/netcoreapp3.1/HomeTask_2.AssemblyInfo.cs
 HomeTask_2/HomeTask_2.2/obj/Debug/netcoreapp3.1/HomeTask_2.2.AssemblyInfo.cs
 HomeTask_2/HomeTask_2.3/obj/Debug/netcoreapp3.1/HomeTask_2.3.AssemblyInfo.cs
 HomeTask_2/HomeTask_2.4/obj/Debug/netcoreapp3.1/HomeTask_2.4.AssemblyInfo.cs
+*.csproj
