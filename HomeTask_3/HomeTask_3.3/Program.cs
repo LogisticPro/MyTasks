@@ -15,13 +15,10 @@ namespace HomeTask_3._3
             Console.WriteLine("Введите третье число :");
             double C = double.Parse(Console.ReadLine());
 
-            if(A <= B && A <= C)            
-                Console.WriteLine($"{A}, {Math.Min(B,C)}, {Math.Max(B, C)}");           
-                else if(B <= A && B <= C)
-                    Console.WriteLine($"{B}, {Math.Min(A, C)}, {Math.Max(A, C)}");
-                    else if(C <= A && C <= B)
-                        Console.WriteLine($"{C}, {Math.Min(A, B)}, {Math.Max(A, B)}");
-                        
+            if(A <= B && A <= C) Console.WriteLine($"{A}, {Math.Min(B,C)}, {Math.Max(B, C)}");           
+               else if(B <= A && B <= C) Console.WriteLine($"{B}, {Math.Min(A, C)}, {Math.Max(A, C)}");
+                  else if(C <= A && C <= B) Console.WriteLine($"{C}, {Math.Min(A, B)}, {Math.Max(A, B)}");
+                                               
             Console.ReadKey();
         }
     }
