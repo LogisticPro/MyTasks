@@ -15,23 +15,11 @@ namespace HomeTask_3._4
             Console.WriteLine("Введите третье число :");
             double C = double.Parse(Console.ReadLine());
 
-            double D = Math.Pow(B, 2) - 4 * A * C;
+            double D = MathHelper.DiscriminantFounder(A, B, C);
 
             Console.WriteLine(D);
 
-            if (D < 0)
-                Console.WriteLine("Корней нет");
-            else if (D == 0)
-            {
-                double X = (-B) / (A * 2);
-                Console.WriteLine($"X = {X}");
-            }
-            else
-            {
-                double X1 = (-B + Math.Sqrt(D)) / (A * 2);
-                double X2 = (-B - Math.Sqrt(D)) / (A * 2);
-                Console.WriteLine($"X1 = {X1}, X2 = {X2}");
-            }
+            CompareHelper.CompareDiscriminant(D, A, B);
 
             Console.ReadKey();
         }

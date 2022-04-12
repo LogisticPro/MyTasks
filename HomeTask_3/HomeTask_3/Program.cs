@@ -12,9 +12,7 @@ namespace HomeTask_3
             Console.WriteLine("Введите второе число :");
             double B = double.Parse(Console.ReadLine());
 
-            if(A > B) Console.WriteLine(A+B);
-                else if(A == B) Console.WriteLine(A * B);
-                    else Console.WriteLine(A-B);
+            CompareHelper.Compare(A, B);
 
             Console.ReadKey();
         }

@@ -9,13 +9,8 @@ namespace HomeTask_2._4
             Console.WriteLine("Введите целое трёхзначно число..");
             int number = int.Parse(Console.ReadLine());
 
-            int firstNumber = number / 100;
-
-            int secondNumber = (number % 100) / 10;
-
-            int thirdNumber = number % 10;
-
-            string temp = (Convert.ToString(thirdNumber) + Convert.ToString(secondNumber) + Convert.ToString(firstNumber));
+            string temp = (Convert.ToString(CountHelper.ThirdDigit(number)) + Convert.ToString(CountHelper.SecondDigit(number)) + 
+                Convert.ToString(CountHelper.FirstDigit(number)));
 
             int result = Convert.ToInt32(temp);
 

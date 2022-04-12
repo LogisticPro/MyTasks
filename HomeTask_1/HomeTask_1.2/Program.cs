@@ -1,4 +1,5 @@
 ﻿using System;
+using HomeTask_1;
 
 namespace HomeTask_1._2
 {
@@ -14,7 +15,7 @@ namespace HomeTask_1._2
             Console.WriteLine("Введите образующую конуса:");
             double l = double.Parse(Console.ReadLine());
 
-            double S = Math.PI * r * (r + l);
+            double S = MathHelper.ConeSquare(r, l);
 
             Console.WriteLine($"Площадь конуса равна: {S} см2");
             Console.ReadKey();

@@ -10,28 +10,8 @@ namespace HomeTask_1._3
 
             int[,] array = new int[5,5];
 
-            Random rand = new Random();
+            ArrayHelper.FindAverage(array);
 
-            int sred = 0;
-
-            int sum = 0;
-
-            for (int i = 0; i < 5; i++)
-            {              
-                for (int j = 0; j < 5; j++)
-                {
-                    array[i,j] = rand.Next(50);
-
-                    Console.Write("{0}\t", array[i, j]);
-
-                    sum += array[i,j];                
-                }
-                sred = sum / 5;                
-
-                Console.WriteLine($"Среднее арифметическое строки № {i + 1} = {sred}");
-
-                sum = 0;
-            }
             Console.ReadKey();
         }
     }

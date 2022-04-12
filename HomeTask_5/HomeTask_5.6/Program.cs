@@ -8,19 +8,7 @@ namespace HomeTask_5._6
         {
             int[] array = new int[] {9, 88, 79, 4, 17, 36, 51, 22};
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write($"{array[i]} ");
-            }
-
-            Console.WriteLine();
-
-            for (int i = 0; i < array.Length - 1; i += 2)
-            {
-                int temp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp;
-            }
+            ArrayHelper.OddAndEvenPositionShift(array);
 
             for (int i = 0; i < array.Length; i++) Console.Write($"{array[i]} ");
 

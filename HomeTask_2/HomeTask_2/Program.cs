@@ -8,17 +8,9 @@ namespace HomeTask_2
         {
             const int number = 735;
 
-            int firstNumber = number / 100;
+            Console.WriteLine($"{CountHelper.FirstDigit(number)} + {CountHelper.SecondDigit(number)} + {CountHelper.ThirdDigit(number)}");
 
-            int secondNumber = (number % 100) / 10;
-
-            int thirdNumber = number % 10;
-
-            Console.WriteLine($"{firstNumber} + {secondNumber} + {thirdNumber}");
-
-            int sum = firstNumber + secondNumber + thirdNumber;
-
-            Console.WriteLine(sum);
+            Console.WriteLine(CountHelper.FirstDigit(number) + CountHelper.SecondDigit(number) + CountHelper.ThirdDigit(number));
 
             Console.ReadKey();
         }

@@ -14,15 +14,13 @@ namespace HomeTask_1
             Console.WriteLine("Введите длинну 2-го катета:");
             double b = double.Parse(Console.ReadLine());
 
-            double c = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
+            double c = MathHelper.ThirdSideOfTriangleFounder(a, b);
 
-            double P = a + b + c;
+            double P = MathHelper.TrianglePerimeterFounder(a, b, c);
 
-            string strP = string.Format("{0:0.###}", P);
+            Console.WriteLine($"Периметр равен: {P:F1} см");
 
-            Console.WriteLine($"Периметр равен: {strP} см");
-
-            double S = 0.5 * a * b;
+            double S = MathHelper.TriangleSquareFounder(a, b);
 
             Console.WriteLine($"Площадь равна: {S} см2");
 

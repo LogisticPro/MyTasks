@@ -9,13 +9,9 @@ namespace HomeTask_5._5
 
             int[] array = new int[] {1, 2, 3, 4, 5 };
 
-            int temp = array[array.Length - 1];
+            ArrayHelper.RightCyclicalShift(array);
 
-            for (int i = array.Length - 1; i > 0; i--) array[i] = array[i - 1];       
-
-            array[0] = temp;
-
-            for (int i = 0; i < array.Length; i++) Console.WriteLine(array[i]);
+            for (int i = 0; i < array.Length; i++) Console.Write($"{array[i]}\t");
 
             Console.ReadKey();
         }

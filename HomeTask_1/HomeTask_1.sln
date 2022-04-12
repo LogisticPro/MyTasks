@@ -3,11 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_1", "HomeTask_1\HomeTask_1.csproj", "{024E23F1-6A06-4FED-B113-BAB8C26C9D2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_1", "HomeTask_1\HomeTask_1.csproj", "{024E23F1-6A06-4FED-B113-BAB8C26C9D2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_1.2", "HomeTask_1.2\HomeTask_1.2.csproj", "{B9799982-CBF2-43AB-8697-052BEFD4D0FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_1.2", "HomeTask_1.2\HomeTask_1.2.csproj", "{B9799982-CBF2-43AB-8697-052BEFD4D0FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{024E23F1-6A06-4FED-B113-BAB8C26C9D2D} = {024E23F1-6A06-4FED-B113-BAB8C26C9D2D}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_1.3", "HomeTask_1.3\HomeTask_1.3.csproj", "{41F2D3A0-8E31-4F16-84D7-E73C7D1D2495}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_1.3", "HomeTask_1.3\HomeTask_1.3.csproj", "{41F2D3A0-8E31-4F16-84D7-E73C7D1D2495}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

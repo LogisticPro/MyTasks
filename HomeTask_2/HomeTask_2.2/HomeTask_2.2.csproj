@@ -6,4 +6,8 @@
     <RootNamespace>HomeTask_2._2</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HomeTask_2\HomeTask_2.csproj" />
+  </ItemGroup>
+
 </Project>

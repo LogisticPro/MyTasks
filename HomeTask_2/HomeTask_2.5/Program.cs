@@ -9,11 +9,7 @@ namespace HomeTask_2._5
             Console.WriteLine("Введите double число..");
             double doubleNumber = double.Parse(Console.ReadLine());
 
-            int intNumber = (int)doubleNumber;
-
-            bool IsZeroFractionalPart = intNumber == doubleNumber;
-
-            Console.WriteLine(IsZeroFractionalPart);
+            Console.WriteLine(CountHelper.IsZeroFractionalPart(doubleNumber));
             Console.ReadKey();
         }
     }

@@ -12,8 +12,7 @@ namespace HomeTask_3._6
 
             double c = double.Parse(Console.ReadLine());
 
-            if ((a + b) > c && (a + c) > b && (b + c) > a) Console.WriteLine("Такой треугольник существует!");
-               else Console.WriteLine("Такого треугольника не существует!");
+            MathHelper.TriangleExists(a, b, c);
 
             Console.ReadKey();
         }
