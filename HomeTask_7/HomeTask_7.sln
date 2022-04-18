@@ -5,6 +5,12 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_7", "HomeTask_7\HomeTask_7.csproj", "{EECA6039-9634-4F3D-B7F1-16180D5F3659}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task 1-2", "Task 1-2", "{295581A0-1B39-4B15-A640-233CC62EFCC6}"
+	ProjectSection(SolutionItems) = preProject
+		HomeTask_7\IOHelper.cs = HomeTask_7\IOHelper.cs
+		HomeTask_7\Passport.cs = HomeTask_7\Passport.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
