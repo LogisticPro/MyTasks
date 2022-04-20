@@ -10,7 +10,7 @@ namespace MonsterRPG_2._0
         static void Main(string[] args)
         {
             Random rand = new Random();
-            Battle.FullFight(CreateHeroes()[rand.Next(0, 8)],
+            Battle.FullFight(CreateHeroes()[rand.Next(0, 4)],
                   CreateMonsters()[rand.Next(0, 8)]);  
             
             Console.ReadKey();
