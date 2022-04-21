@@ -9,7 +9,8 @@ namespace MonsterRPG_2._0.Creatures
 {   
     public class Hero : Humanoid, ICombatan
     {
-        Inventory inv;
+        private Inventory inv;
+        private Item item;
         public string WarCry => $"Герой {Name} кричит: За честь и отвагу!";
         public string DieCry => $"Герой {Name} издаёт предсмертный хрип: Нееееееееет!";
 
@@ -17,7 +18,7 @@ namespace MonsterRPG_2._0.Creatures
             : base(race, name)
         {
             inv = new Inventory();         
-            Item item = ItemCollection.GetItem()[rand.Next(0, 8)];
+            item = ItemCollection.GetItem()[rand.Next(0, 8)];
             inv.AddItem(item);
 
             Intelligence = intelligence + item.Intelligence;
@@ -36,7 +37,8 @@ namespace MonsterRPG_2._0.Creatures
                 $" Здоровье: {MaxHP}\r \n" +
                 $" Сила: {Strength}\r \n" +
                 $" Ловкость: {Agility}\r \n" +
-                $" Интеллект {Intelligence}");
+                $" Интеллект {Intelligence}\r \n" +
+                $" Aртефакт: {item.Name} ({item.Intelligence} к интеллекту, {item.Agility} к ловкости, {item.Strength} к силе)");
             return info;
         }
 
