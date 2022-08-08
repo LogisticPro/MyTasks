@@ -102,3 +102,6 @@ HomeTask_7/.vs/HomeTask_7/DesignTimeBuild/.dtbcache.v2
 HomeTask_7/.vs/HomeTask_7/v17/.futdcache.v1
 MonsterRPG 2.0/.vs/MonsterRPG 2.0/DesignTimeBuild/.dtbcache.v2
 MonsterRPG 2.0/MonsterRPG 2.0/obj/Debug/netcoreapp3.1/MonsterRPG 2.0.csproj.BuildWithSkipAnalyzers
+Heroes3WebApp/Heroes3WebApp/DAL/obj/
+Heroes3WebApp/Heroes3WebApp/Heroes3BusinessLayer/obj/
+Heroes3WebApp/Heroes3WebApp/Heroes3WebApp/obj/
