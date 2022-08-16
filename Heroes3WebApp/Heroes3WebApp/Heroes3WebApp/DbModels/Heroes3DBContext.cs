@@ -144,6 +144,10 @@ namespace Heroes3WebApp.DbModels
 
                 entity.Property(e => e.Name).HasMaxLength(25);
 
+                entity.Property(e => e.HeroClass_1).HasMaxLength(20);
+
+                entity.Property(e => e.HeroClass_2).HasMaxLength(20);
+
                 entity.Property(e => e.Picture).HasMaxLength(1);
 
                 entity.HasOne(d => d.Landscape)

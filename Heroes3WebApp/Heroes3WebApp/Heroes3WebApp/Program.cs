@@ -1,4 +1,7 @@
+using Heroes3WebApp.Middleware;
+using Heroes3WebApp.Services;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,8 @@ string connection = builder.Configuration.GetConnectionString("DefaultConnection
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<ITownService, TownService>();
+builder.Services.AddTransient<IHeroService, HeroService>();
 
 var app = builder.Build();
 
@@ -25,5 +30,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseToken("password");
 
 app.Run();

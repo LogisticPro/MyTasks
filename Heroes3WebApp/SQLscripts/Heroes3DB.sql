@@ -15,6 +15,8 @@ create table Towns(
 Id int not null IDENTITY(1,1),
 LandscapeId int not null,
 Name nvarchar(25),
+HeroClass_1 nvarchar(20),
+HeroClass_2 nvarchar(20),
 Discription nvarchar(100),
 Picture varbinary,
 CONSTRAINT PK_Town PRIMARY KEY (Id)); 
@@ -137,9 +139,11 @@ VALUES ('Dirt'), ('Sand'), ('Grass'), ('Snow'), ('Swamp'), ('Rocks'), ('Dungeon 
 
 GO
 
-INSERT INTO [dbo].[Towns] (LandscapeId, Name)
-VALUES ('3', 'Castle'), ('3', 'Rampart'), ('4', 'Tower'), ('8', 'Inferno'), ('1', 'Necropolis'),
-       ('7', 'Dungeon'), ('6', 'Stronghold'), ('5', 'Fortress'), ('9', 'Conflux'), ('5','Cove');
+INSERT INTO [dbo].[Towns] (LandscapeId, Name, HeroClass_1, HeroClass_2)
+VALUES ('3', 'Castle', 'Knight', 'Cleric'), ('3', 'Rampart', 'Ranger', 'Druid'), ('4', 'Tower', 'Alchemist', 'Wizard'),
+       ('8', 'Inferno', 'Demoniac', 'Heretic'), ('1', 'Necropolis', 'Death Knight', 'Necromancer'),('7', 'Dungeon', 'Overlord', 'Warlock'),
+	   ('6', 'Stronghold', 'Barbarian', 'Battle Mage'), ('5', 'Fortress', 'Beastmaster', 'Witch'), 
+	   ('9', 'Conflux', 'Planeswalker', 'Elementalist'), ('5','Cove', 'Captain', 'Navigator');
 
 GO
 

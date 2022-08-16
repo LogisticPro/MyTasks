@@ -1,0 +1,13 @@
+﻿@model List<TownListModel>
+
+@{
+    ViewData["Title"] = "Heroes 3 towns";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach(var item in Model)
+{
+    <p><a class="nav-link text-dark" asp-area="" asp-controller="Town" asp-action="TownInfo" asp-route-id=@item.Id> @item.Name </a></p>
+}
+
