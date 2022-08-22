@@ -15,13 +15,6 @@ namespace Heroes3WebApp.Controllers
 
         public IActionResult Index()
         {
-            //var list = db.Landscapes.ToList();
-            //string result = "";
-            //foreach (var item in list)
-            //{
-            //    result += $"{item.Id} {item.Name}";
-            //}
-            //ViewData["List"] = result;
             return View();
         }
 

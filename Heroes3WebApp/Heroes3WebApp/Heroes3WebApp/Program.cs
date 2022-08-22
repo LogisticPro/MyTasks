@@ -1,4 +1,5 @@
 using Heroes3WebApp.Middleware;
+using Heroes3WebApp.Models;
 using Heroes3WebApp.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,8 @@ builder.Services.AddTransient<IHeroService, HeroService>();
 
 var app = builder.Build();
 
+app.UseRequestCulture();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -30,7 +33,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.UseToken("password");
 
 app.Run();

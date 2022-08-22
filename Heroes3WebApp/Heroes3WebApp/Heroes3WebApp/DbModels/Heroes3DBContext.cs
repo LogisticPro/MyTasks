@@ -150,6 +150,8 @@ namespace Heroes3WebApp.DbModels
 
                 entity.Property(e => e.Picture).HasMaxLength(1);
 
+                entity.Property(e => e.DetailPicture).HasMaxLength(1);
+
                 entity.HasOne(d => d.Landscape)
                     .WithMany(p => p.Towns)
                     .HasForeignKey(d => d.LandscapeId)

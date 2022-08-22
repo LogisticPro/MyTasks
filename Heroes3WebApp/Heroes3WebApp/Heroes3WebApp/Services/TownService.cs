@@ -20,8 +20,9 @@ namespace Heroes3WebApp.Services
                     {
                         Id = town.Id,
                         Name = town.Name,
-                        Picture = town.Picture
+                        Picture = town.Picture,
                     });
+                    
                 }
             }
             return result;
@@ -41,7 +42,7 @@ namespace Heroes3WebApp.Services
                     result.LandscapeId = town.LandscapeId;
                     result.LandscapeName = town.Landscape.Name;
                     result.Name = town.Name;
-                    result.Picture = town.Picture;
+                    result.DetailPicture = town.DetailPicture;
                     result.Discription = town.Discription;
                     result.HeroClass_1 = town.HeroClass_1;
                     result.HeroClass_2 = town.HeroClass_2;

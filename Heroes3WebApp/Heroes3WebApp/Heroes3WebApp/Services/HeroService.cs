@@ -16,24 +16,27 @@ namespace Heroes3WebApp.Services
 
                 foreach (var hero in heroes)
                 {
-                    string? type = string.Empty;
+                    string? heroClass = string.Empty;
 
                     if(hero.Type == 1)
                     {
-                        type = hero.Town.HeroClass_1;
+                        heroClass = hero.Town.HeroClass_1;
                     }
                     else if(hero.Type == 2)
                     {
-                        type = hero.Town.HeroClass_2;
+                        heroClass = hero.Town.HeroClass_2;
                     }
 
                     result.Add(new HeroModel()
                     {
                         Id = hero.Id,
+                        TownId = hero.TownId,
                         Picture = hero.Picture,
                         Name = hero.Name,                      
                         TownName = hero.Town.Name,
-                        Type = type
+                        Class = heroClass,
+                        Type = hero.Type,                      
+                        TownPicture = hero.Town.Picture
                     });
                 }
             }

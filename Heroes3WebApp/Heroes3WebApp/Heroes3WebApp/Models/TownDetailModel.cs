@@ -9,6 +9,6 @@
         public string? HeroClass_1 { get; set; }
         public string? HeroClass_2 { get; set; }
         public string? Discription { get; set; }
-        public byte[]? Picture { get; set; }
+        public byte[]? DetailPicture { get; set; }
     }
 }
