@@ -1,4 +1,5 @@
-﻿using Heroes3WebApp.Services;
+﻿using BLL.Services;
+using Heroes3WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Heroes3WebApp.Controllers
@@ -16,12 +17,24 @@ namespace Heroes3WebApp.Controllers
             return RedirectToAction("List");
         }
 
-        [HttpGet]
+        [HttpGet]   
         public IActionResult List()
         {
             var list = _townService.GetList();
 
-            return View(list);
+            var result = new List<TownListViewModel>();
+
+            foreach (var town in list)
+            {
+                result.Add(new TownListViewModel()
+                {
+                    Id = town.Id,
+                    Name = town.Name,
+                    Picture = town.Picture
+                });
+            }
+
+            return View(result);
         }
 
         [HttpGet]
@@ -29,7 +42,18 @@ namespace Heroes3WebApp.Controllers
         {
             var town = _townService.GetDetail(id);
 
-            return View(town);
+            var result = new TownDetailViewModel();
+
+            result.Id = town.Id;
+            result.LandscapeId = town.LandscapeId;
+            result.LandscapeName = town.LandscapeName;
+            result.Name = town.Name;
+            result.DetailPicture = town.DetailPicture;
+            result.Discription = town.Discription;
+            result.HeroClass_1 = town.HeroClass_1;
+            result.HeroClass_2 = town.HeroClass_2;
+
+            return View(result);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model List<HeroModel>
+﻿@model List<HeroListViewModel>
 
 @{
     ViewData["Title"] = "List of heroes";
@@ -8,16 +8,27 @@
 
 <hr>
 
-@foreach(var item in Model)
-{   
-  <div class="row">
-    <div class="col-md-2"><img src="data:image/gif;base64, @Convert.ToBase64String(item.Picture)"/> @item.Name
-  </div>
-  @*<div class="col-md-1"><a class="nav-link text-dark" asp-area="" asp-controller="Town" asp-action="TownInfo" asp-route-id=@item.TownId>
-      <img src="data:image/gif;base64, @Convert.ToBase64String(item.TownPicture)"/></a>*@
-    <div class="col-md-1"><img src="data:image/gif;base64, @Convert.ToBase64String(item.TownPicture)"/>
-  </div>
-  <div class="col-md-2">@if(item.Type == 1){<font color="red">@item.Class</font>}
-    else if (item.Type == 2){<font color="blue">@item.Class</font>}</div>
-  </div>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-2">
+            <img src="data:image/gif;base64, @Convert.ToBase64String(item.Picture)" /> @item.Name
+        </div>
+        <div class="col-md-1">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Town" asp-action="TownInfo" asp-route-id=@item.TownId>
+                <img src="data:image/gif;base64, @Convert.ToBase64String(item.TownPicture)" />
+            </a>
+            @*<div class="col-md-1"><img src="data:image/gif;base64, @Convert.ToBase64String(item.TownPicture)"/>*@
+        </div>
+        <div class="col-md-2">
+            @if (item.Type == 1)
+            {
+                <font color="red">@item.Class</font>
+            }
+            else if (item.Type == 2)
+            {
+                <font color="blue">@item.Class</font>
+            }
+        </div>
+    </div>
 }

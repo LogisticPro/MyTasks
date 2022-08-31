@@ -1,5 +1,6 @@
-﻿using Heroes3WebApp.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using BLL.Services;
+using Heroes3WebApp.Models;
 
 namespace Heroes3WebApp.Controllers
 {
@@ -21,7 +22,24 @@ namespace Heroes3WebApp.Controllers
         {
             var list = _heroService.GetList();
 
-            return View(list);
+            var result = new List<HeroListViewModel>();
+
+            foreach (var hero in list)
+            {
+                result.Add(new HeroListViewModel()
+                {
+                    Id = hero.Id,
+                    TownId = hero.TownId,
+                    Picture = hero.Picture,
+                    Name = hero.Name,
+                    TownName = hero.TownName,
+                    Class = hero.Class,
+                    Type = hero.Type,
+                    TownPicture = hero.TownPicture
+                });
+            }
+
+            return View(result);
         }
     }
 }

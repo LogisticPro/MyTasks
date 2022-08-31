@@ -6,6 +6,12 @@ USE Heroes3DB
 
 GO
 
+create table [User](
+Id int not null IDENTITY(1,1),
+Username nvarchar(50) not null,
+[Password] nvarchar(50) not null,
+Email nvarchar(50) not null)
+
 create table Landscapes(
 Id int not null IDENTITY(1,1),
 Name nvarchar(25),
@@ -62,8 +68,9 @@ Name nvarchar(25),
 HP int not null,
 Attack int not null,
 Defence int not null,
-Damage int not null,
+Damage nvarchar(10),
 Speed int not null,
+Level int not null,
 Discription nvarchar(100),
 Picture varbinary(max),
 CONSTRAINT PK_Monster PRIMARY KEY(Id));
@@ -148,7 +155,7 @@ VALUES ('3', 'Castle', 'Knight', 'Cleric'), ('3', 'Rampart', 'Ranger', 'Druid'),
 GO
 
 INSERT INTO [dbo].[Costs] (Gold)
-VALUES ('2500')
+VALUES ('2500'), ('60'), ('75')
 
 GO
 
@@ -471,4 +478,18 @@ SET Picture =
       (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\Heroes3WebApp\Heroes3WebApp\Images\HeroIcon\Hero_Astra_small.gif', SINGLE_BLOB) AS image)
 WHERE Id = 20
 
+INSERT INTO [dbo].[Monsters] (TownId, Name, HP, Attack, Defence, Damage, Speed, [Level], CostId)
+VALUES ('1', 'Pikeman', '10', '4','5', '1-3', '4', '1', '2'),
+	   ('1', 'Halberdier', '10', '6','5', '2-3', '5', '1', '3')
 
+go
+
+UPDATE [dbo].[Monsters] 
+SET Picture = 
+      (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\Heroes3WebApp\Heroes3WebApp\Images\CreatureIcon\Creature_portrait_Pikeman_small.gif', SINGLE_BLOB) AS image)
+WHERE Id = 1
+
+UPDATE [dbo].[Monsters] 
+SET Picture = 
+      (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\Heroes3WebApp\Heroes3WebApp\Images\CreatureIcon\Creature_portrait_Halberdier_small.gif', SINGLE_BLOB) AS image)
+WHERE Id = 2

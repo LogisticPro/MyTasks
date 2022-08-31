@@ -31,6 +31,31 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Hero" asp-action="List">Heroes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Monster" asp-action="List">Creatures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Authentication" asp-action="Index">Authenticate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Authentication" asp-action="AuthorizedView">Authorized View</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Authentication" asp-action="NotAuthorizedView">Not Authorized View</a>
+                        </li>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                @using (Html.BeginForm("Logout", "Authentication", FormMethod.Post))
+                                {
+                                    <input type="submit" value="Logout" />
+                                }
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

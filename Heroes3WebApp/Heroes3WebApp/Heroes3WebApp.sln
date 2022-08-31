@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes3WebApp", "Heroes3WebApp\Heroes3WebApp.csproj", "{93DE71DE-47AA-441C-8CB1-ADA53151888E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{8204D580-7D7A-40E9-BB06-140C85A2B377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{DE476B4A-D329-40C9-A84A-E26C29DAE58E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{93DE71DE-47AA-441C-8CB1-ADA53151888E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93DE71DE-47AA-441C-8CB1-ADA53151888E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93DE71DE-47AA-441C-8CB1-ADA53151888E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8204D580-7D7A-40E9-BB06-140C85A2B377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8204D580-7D7A-40E9-BB06-140C85A2B377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8204D580-7D7A-40E9-BB06-140C85A2B377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8204D580-7D7A-40E9-BB06-140C85A2B377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE476B4A-D329-40C9-A84A-E26C29DAE58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE476B4A-D329-40C9-A84A-E26C29DAE58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE476B4A-D329-40C9-A84A-E26C29DAE58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE476B4A-D329-40C9-A84A-E26C29DAE58E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
