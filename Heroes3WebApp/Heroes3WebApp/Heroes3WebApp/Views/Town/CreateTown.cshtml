@@ -1,0 +1,29 @@
+﻿<div>
+    <h3>Create a new town</h3>
+    <form method="post">       
+        <table>
+            <tr>
+                <td>Town Name:</td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>Discription:</td>
+                <td><input type="text" name="Discription" /></td>
+            </tr>
+            <tr>
+                <td>Lanscape:</td>
+                <td>@Html.DropDownList("LandscapeId", (SelectList)ViewData["landscapes"], "Select landscape",
+                new {@class = "form-control"})</td>
+            </tr>
+            <tr>
+                <td>Warrior hero class name:</td>
+                <td><input type="text" name="HeroClass_1" /></td>
+            </tr>
+             <tr>
+                <td>Mage hero class name:</td>
+                <td><input type="text" name="HeroClass_2" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Save" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>

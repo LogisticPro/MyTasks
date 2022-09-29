@@ -10,5 +10,6 @@
         public string? HeroClass_2 { get; set; }
         public string? Discription { get; set; }
         public byte[]? DetailPicture { get; set; }
+        public byte[]? ListPicture { get; set; }
     }
 }

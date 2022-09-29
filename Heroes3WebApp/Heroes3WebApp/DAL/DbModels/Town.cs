@@ -21,12 +21,12 @@ namespace DAL.DbModels
         public string? Discription { get; set; }
         public byte[]? Picture { get; set; }
         public byte[]? DetailPicture { get; set; }
-        public string PictureName { get; set; }
+        public string? PictureName { get; set; }
 
         public virtual Landscape Landscape { get; set; } = null!;
-        public virtual ICollection<Building> Buildings { get; set; }
-        public virtual ICollection<HeroStat> HeroStats { get; set; }
-        public virtual ICollection<Hero> Heroes { get; set; }
-        public virtual ICollection<Monster> Monsters { get; set; }
+        public virtual ICollection<Building> Buildings { get; set; } = null!;
+        public virtual ICollection<HeroStat> HeroStats { get; set; } = null!;
+        public virtual ICollection<Hero> Heroes { get; set; } = null!;
+        public virtual ICollection<Monster> Monsters { get; set; } = null!;
     }
 }

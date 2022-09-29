@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BLL.Dto
+﻿namespace BLL.Dto
 {
     public class TownDetailDto
     {
@@ -16,5 +10,6 @@ namespace BLL.Dto
         public string? HeroClass_2 { get; set; }
         public string? Discription { get; set; }
         public byte[]? DetailPicture { get; set; }
+        public byte[]? ListPicture { get; set; }
     }
 }

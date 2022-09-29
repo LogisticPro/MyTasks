@@ -11,5 +11,7 @@ namespace BLL.Services
     {
         public List<TownListDto> GetList();
         public TownDetailDto GetDetail(int id);
+        public void Delete(int id);
+        public void Create(TownDetailDto town);
     }
 }

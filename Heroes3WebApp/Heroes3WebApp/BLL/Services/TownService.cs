@@ -1,22 +1,17 @@
 ﻿using BLL.Dto;
 using DAL.DbModels;
 using DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL.Services
 {
     public class TownService : ITownService
     {
-        private readonly IRepository<Town> _repository;
+        private readonly IRepository<Town> _townRepository;
         private readonly IRepository<Landscape> _landscapeRepository;
 
         public TownService(IRepository<Town> repository, IRepository<Landscape> landscapeRepository)
         {
-            _repository = repository;
+            _townRepository = repository;
             _landscapeRepository = landscapeRepository;
         }
 
@@ -24,7 +19,7 @@ namespace BLL.Services
         {
             var result = new List<TownListDto>();
 
-            var towns = _repository.GetAll();
+            var towns = _townRepository.GetAll();
 
             foreach (var town in towns)
             {
@@ -43,7 +38,7 @@ namespace BLL.Services
         {
             var result = new TownDetailDto();
 
-            var town = _repository.Get(id);
+            var town = _townRepository.Get(id);
             var landscape = _landscapeRepository.Get(town.LandscapeId);
 
             if (town != null)
@@ -59,6 +54,32 @@ namespace BLL.Services
             }
 
             return result;
+        }
+
+        public void Delete(int id)
+        {           
+            var town = _townRepository.Get(id);
+
+            if(town != null)
+            {
+                _townRepository.Delete(id);              
+            }
+        }
+
+        public void Create(TownDetailDto item)
+        {
+            var town = new Town()
+            {
+                Name = item.Name,
+                DetailPicture = item.DetailPicture,
+                Discription = item.Discription,
+                HeroClass_1 = item.HeroClass_1,
+                HeroClass_2 = item.HeroClass_2,
+                LandscapeId = item.LandscapeId,
+                Picture = item.ListPicture
+            };
+
+            _townRepository.Create(town);
         }
     }
 }

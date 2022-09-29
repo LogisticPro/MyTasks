@@ -28,7 +28,7 @@ namespace DAL.Repositories
 
         public IEnumerable<Landscape> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Landscapes.ToList();
         }
 
         public void Update(Landscape item)

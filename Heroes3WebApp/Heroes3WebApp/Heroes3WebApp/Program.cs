@@ -16,6 +16,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 DependencyInjectionConfig.Config(builder.Services);
 
+builder.Services.AddScoped<ILandscapeService, LandscapeService>();
 builder.Services.AddScoped<ITownService, TownService>();
 builder.Services.AddScoped<IHeroService, HeroService>();
 builder.Services.AddScoped<IMonsterService, MonsterService>();
