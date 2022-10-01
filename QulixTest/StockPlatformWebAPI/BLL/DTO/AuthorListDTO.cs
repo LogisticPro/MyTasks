@@ -3,6 +3,6 @@
     public class AuthorListDTO
     {
         public int Id { get; set; }
-        public string Nickname { get; set; } = null!;
+        public string Nickname { get; set; }
     }
 }

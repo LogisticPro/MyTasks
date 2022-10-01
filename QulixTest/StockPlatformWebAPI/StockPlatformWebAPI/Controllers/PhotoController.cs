@@ -18,7 +18,7 @@ namespace StockPlatformWebAPI.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<Photo>> GetDetailAsync(int id)
+        public async Task<ActionResult<PhotoDetailViewModel>> GetDetailAsync(int id)
         {
             var photo = await _photoService.GetDetailAsync(id);
 
@@ -45,7 +45,7 @@ namespace StockPlatformWebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Photo>> GetListAsync()
+        public async Task<ActionResult<PhotoListViewModel>> GetListAsync()
         {
             var list = await _photoService.GetListAsync();
 
@@ -65,7 +65,7 @@ namespace StockPlatformWebAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<Photo>> UpdateAsync(PhotoDetailViewModel photo)
+        public async Task<ActionResult<PhotoDetailViewModel>> UpdateAsync(PhotoDetailViewModel photo)
         {
             if (photo == null)
             {
@@ -89,7 +89,7 @@ namespace StockPlatformWebAPI.Controllers
 
             await _photoService.UpdateAsync(result);
 
-            return Ok(result);
+            return Ok(photo);
         }
     }
 }
