@@ -74,20 +74,20 @@ values ('Homeless frog','The homeless Frog sang - croaked, Sadly sang and at the
 
 UPDATE Photo 
 SET Picture = 
-      (SELECT * FROM OPENROWSET(BULK N'C:\D\photo\nichose.png', SINGLE_BLOB) AS image)
+      (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\QulixTest\Pictures\nichose.png', SINGLE_BLOB) AS image)
 WHERE Id = 1
 
 UPDATE Photo 
 SET Picture = 
-      (SELECT * FROM OPENROWSET(BULK N'C:\D\photo\cat.png', SINGLE_BLOB) AS image)
+      (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\QulixTest.\Pictures\cat.png', SINGLE_BLOB) AS image)
 WHERE Id = 2
 
 UPDATE Photo 
 SET Picture = 
-      (SELECT * FROM OPENROWSET(BULK N'C:\D\photo\dog.png', SINGLE_BLOB) AS image)
+      (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\QulixTest.\Pictures\dog.png', SINGLE_BLOB) AS image)
 WHERE Id = 3
 
 UPDATE Photo 
 SET Picture = 
-      (SELECT * FROM OPENROWSET(BULK N'C:\D\photo\bird.png', SINGLE_BLOB) AS image)
+      (SELECT * FROM OPENROWSET(BULK N'C:\D\VladWork\repository\QulixTest\Pictures\bird.png', SINGLE_BLOB) AS image)
 WHERE Id = 4
